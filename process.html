@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estefany Muniz's design process — research-first, iterative, and built for AI-era products." />
+
+  <title>Process — Estefany Muniz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- =====================================================================
+       NAVIGATION
+  ====================================================================== -->
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="wrap">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo">Estefany<em>.</em></a>
+
+          <ul class="nav__links" role="list">
+            <li><a href="index.html"   class="nav__link">Home</a></li>
+            <li><a href="about.html"   class="nav__link">About</a></li>
+            <li><a href="work.html"    class="nav__link">Work</a></li>
+            <li><a href="process.html" class="nav__link">Process</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+
+          <div class="nav__actions">
+            <button class="btn-icon theme-toggle" aria-label="Switch to light mode">☀</button>
+            <a href="contact.html" class="btn btn--primary">Let's talk</a>
+          </div>
+
+          <button class="nav__burger"
+                  aria-label="Open navigation menu"
+                  aria-expanded="false"
+                  aria-controls="mobile-drawer">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav__drawer" id="mobile-drawer" aria-label="Mobile navigation">
+        <a href="index.html"   class="nav__drawer-link">Home</a>
+        <a href="about.html"   class="nav__drawer-link">About</a>
+        <a href="work.html"    class="nav__drawer-link">Work</a>
+        <a href="process.html" class="nav__drawer-link">Process</a>
+        <a href="contact.html" class="nav__drawer-link">Contact</a>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================================================================
+         PAGE HERO
+    ==================================================================== -->
+    <section class="page-hero" aria-label="Page introduction">
+      <div class="wrap">
+        <p class="page-hero__label">How I work</p>
+        <h1 class="page-hero__title">
+          A process built for<br /><span class="grad">systems that learn</span>
+        </h1>
+        <p class="page-hero__desc">
+          Designing for AI requires a different discipline. The interface is
+          only part of the problem — you're also designing for uncertainty,
+          model behaviour, and the trust people extend to machines.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         DESIGN PROCESS TIMELINE
+    ==================================================================== -->
+    <section class="section" aria-labelledby="process-heading">
+      <div class="wrap">
+
+        <div class="sh reveal">
+          <p class="sh__label">My process</p>
+          <h2 class="sh__title" id="process-heading">Five stages. One through-line: the user.</h2>
+          <p class="sh__desc">
+            No two projects are identical, but this framework adapts to any
+            scale — from a two-week sprint to a six-month product overhaul.
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <ol class="process-list" aria-label="Five-step design process">
+
+          <li class="process-item reveal">
+            <p class="process-item__num">Step 01</p>
+            <h3 class="process-item__title">Discover &amp; Frame</h3>
+            <p class="process-item__desc">
+              Before I open Figma I open my notebook. This phase is about
+              understanding who the users are, what they actually need (not what
+              stakeholders assume they need), and where the current experience
+              breaks down. Methods include contextual interviews, diary studies,
+              competitive benchmarking, and — for AI products — model capability
+              audits to understand what the system can realistically do.
+            </p>
+          </li>
+
+          <li class="process-item reveal reveal--d1">
+            <p class="process-item__num">Step 02</p>
+            <h3 class="process-item__title">Define &amp; Prioritise</h3>
+            <p class="process-item__desc">
+              Research generates noise. This stage turns it into signal: clear
+              problem statements, prioritised user needs, and explicit design
+              principles for the project. For AI products I also define the
+              "trust contract" — what the system promises to users, what it
+              cannot guarantee, and how those limits should be communicated.
+            </p>
+          </li>
+
+          <li class="process-item reveal reveal--d2">
+            <p class="process-item__num">Step 03</p>
+            <h3 class="process-item__title">Explore &amp; Prototype</h3>
+            <p class="process-item__desc">
+              I sketch wide before going deep — low-fidelity explorations that
+              challenge assumptions without investing in pixels. Once the right
+              direction emerges I build interactive prototypes at the fidelity
+              needed for meaningful testing. For conversational and voice
+              interfaces I prototype the dialogue before the UI.
+            </p>
+          </li>
+
+          <li class="process-item reveal reveal--d3">
+            <p class="process-item__num">Step 04</p>
+            <h3 class="process-item__title">Test &amp; Learn</h3>
+            <p class="process-item__desc">
+              Testing is not a gate at the end — it's woven into every stage.
+              Moderated usability sessions, unmoderated remote tests, and
+              A/B experiments all serve different questions. For AI interfaces
+              I pay particular attention to how users calibrate trust over
+              repeated interactions, not just the first session.
+            </p>
+          </li>
+
+          <li class="process-item reveal">
+            <p class="process-item__num">Step 05</p>
+            <h3 class="process-item__title">Ship &amp; Evolve</h3>
+            <p class="process-item__desc">
+              Launch is the beginning, not the end. I work closely with
+              engineering through handoff, write thorough design specs, and
+              stay close to the product post-launch to catch edge cases
+              that only real usage surfaces. AI products in particular
+              need ongoing design attention as model behaviour changes.
+            </p>
+          </li>
+
+        </ol>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TOOLS
+    ==================================================================== -->
+    <section class="section" style="background:var(--c-surface); border-top:1px solid var(--c-border);" aria-labelledby="tools-heading">
+      <div class="wrap">
+
+        <div class="sh sh--center reveal">
+          <p class="sh__label">Toolbox</p>
+          <h2 class="sh__title" id="tools-heading">Tools I use daily</h2>
+          <p class="sh__desc">
+            The tool is always secondary to the thinking behind it — but
+            here's what's currently in the kit.
+          </p>
+        </div>
+
+        <ul class="tools-grid reveal" role="list" aria-label="Design tools">
+          <li class="tool">
+            <span class="tool__icon" aria-hidden="true">✏️</span>
+            <span class="tool__name">Figma</span>
+          </li>
+          <li class="tool">
+            <span class="tool__icon" aria-hidden="true">📋</span>
+            <span class="tool__name">FigJam</span>
+          </li>
+          <li class="tool">
+            <span class="tool__icon" aria-hidden="true">🔬</span>
+            <span class="tool__name">Maze</span>
+          </li>
+          <li class="tool">
+            <span class="tool__icon" aria-hidden="true">🎥</span>
+            <span class="tool__name">Lookback</span>
+          </li>
+          <li class="tool">
+            <span class="tool__icon" aria-hidden="true">📊</span>
+            <span class="tool__name">Hotjar</span>
+          </li>
+          <li class="tool">
+            <span class="tool__icon" aria-hidden="true">🗂</span>
+            <span class="tool__name">Notion</span>
+          </li>
+          <li class="tool">
+            <span class="tool__icon" aria-hidden="true">💬</span>
+            <span class="tool__name">Miro</span>
+          </li>
+          <li class="tool">
+            <span class="tool__icon" aria-hidden="true">🤖</span>
+            <span class="tool__name">Claude / GPT</span>
+          </li>
+          <li class="tool">
+            <span class="tool__icon" aria-hidden="true">🌐</span>
+            <span class="tool__name">HTML / CSS</span>
+          </li>
+          <li class="tool">
+            <span class="tool__icon" aria-hidden="true">📱</span>
+            <span class="tool__name">Protopie</span>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         AI DESIGN PRINCIPLES
+    ==================================================================== -->
+    <section class="section" aria-labelledby="principles-heading">
+      <div class="wrap">
+
+        <div class="sh reveal">
+          <p class="sh__label">My north star</p>
+          <h2 class="sh__title" id="principles-heading">Principles for AI experience design</h2>
+        </div>
+
+        <!-- Grid of principle cards -->
+        <ul style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:1.25rem;" role="list" aria-label="Design principles">
+
+          <li class="reveal" style="background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--r-md); padding:1.75rem;">
+            <p style="font-size:1.5rem; margin-bottom:0.75rem;" aria-hidden="true">🔍</p>
+            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Explain, don't just show</h3>
+            <p style="font-size:0.875rem;">
+              AI outputs without context are just assertions. Good design
+              makes the reasoning visible enough that users can evaluate it.
+            </p>
+          </li>
+
+          <li class="reveal reveal--d1" style="background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--r-md); padding:1.75rem;">
+            <p style="font-size:1.5rem; margin-bottom:0.75rem;" aria-hidden="true">🎛</p>
+            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Give control back</h3>
+            <p style="font-size:0.875rem;">
+              Every AI action should have a clear undo, override, or
+              feedback mechanism. Helpfulness without agency is paternalism.
+            </p>
+          </li>
+
+          <li class="reveal reveal--d2" style="background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--r-md); padding:1.75rem;">
+            <p style="font-size:1.5rem; margin-bottom:0.75rem;" aria-hidden="true">⚠️</p>
+            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Design for failure</h3>
+            <p style="font-size:0.875rem;">
+              Models get things wrong. The question is whether the interface
+              helps users catch and recover from errors — or hides them.
+            </p>
+          </li>
+
+          <li class="reveal reveal--d3" style="background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--r-md); padding:1.75rem;">
+            <p style="font-size:1.5rem; margin-bottom:0.75rem;" aria-hidden="true">♿</p>
+            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Accessibility is non-negotiable</h3>
+            <p style="font-size:0.875rem;">
+              AI tools that are inaccessible to users with disabilities
+              amplify existing inequalities. Inclusive design is a
+              requirement, not a nice-to-have.
+            </p>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section--sm" style="background:var(--c-surface); border-top:1px solid var(--c-border);" aria-label="Call to action">
+      <div class="wrap" style="text-align:center;">
+        <div class="reveal">
+          <p style="color:var(--c-text); font-size:1.05rem; margin-bottom:1.5rem;">
+            Want to bring this approach to your product?
+          </p>
+          <a href="contact.html" class="btn btn--primary">Let's talk <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer__inner">
+        <p class="footer__copy">© 2025 Estefany Muniz. Designed with intention.</p>
+        <ul class="footer__links" role="list">
+          <li><a href="https://linkedin.com" class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">LinkedIn</a></li>
+          <li><a href="https://behance.net"  class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="Behance (opens in new tab)">Behance</a></li>
+          <li><a href="contact.html"         class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

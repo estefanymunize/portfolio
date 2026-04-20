@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Estefany Muniz — UX designer focused on AI-powered products, human-centred research, and ethical design." />
+
+  <title>About — Estefany Muniz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- =====================================================================
+       NAVIGATION
+  ====================================================================== -->
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="wrap">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo">Estefany<em>.</em></a>
+
+          <ul class="nav__links" role="list">
+            <li><a href="index.html"   class="nav__link">Home</a></li>
+            <li><a href="about.html"   class="nav__link">About</a></li>
+            <li><a href="work.html"    class="nav__link">Work</a></li>
+            <li><a href="process.html" class="nav__link">Process</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+
+          <div class="nav__actions">
+            <button class="btn-icon theme-toggle" aria-label="Switch to light mode">☀</button>
+            <a href="contact.html" class="btn btn--primary">Let's talk</a>
+          </div>
+
+          <button class="nav__burger"
+                  aria-label="Open navigation menu"
+                  aria-expanded="false"
+                  aria-controls="mobile-drawer">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav__drawer" id="mobile-drawer" aria-label="Mobile navigation">
+        <a href="index.html"   class="nav__drawer-link">Home</a>
+        <a href="about.html"   class="nav__drawer-link">About</a>
+        <a href="work.html"    class="nav__drawer-link">Work</a>
+        <a href="process.html" class="nav__drawer-link">Process</a>
+        <a href="contact.html" class="nav__drawer-link">Contact</a>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================================================================
+         PAGE HERO
+    ==================================================================== -->
+    <section class="page-hero" aria-label="Page introduction">
+      <div class="wrap">
+        <p class="page-hero__label">About me</p>
+        <h1 class="page-hero__title">
+          A designer who asks<br /><span class="grad">why</span> before asking <span class="grad">how</span>
+        </h1>
+        <p class="page-hero__desc">
+          I believe great UX is not about beautiful screens — it's about
+          removing the distance between what people need and what technology provides.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT BODY
+    ==================================================================== -->
+    <section class="section" aria-labelledby="about-heading">
+      <div class="wrap">
+        <div class="about-grid">
+
+          <!-- Sticky portrait column -->
+          <aside class="about-photo reveal" aria-label="Portrait of Estefany Muniz">
+            <div class="about-photo__frame">
+              <!--
+                Replace the placeholder below with a real <img> once you add
+                your photo to the images/ folder:
+                <img src="images/estefany.jpg" alt="Estefany Muniz smiling, professional portrait" />
+              -->
+              <div class="about-photo__placeholder" aria-hidden="true">👩🏽‍💻</div>
+            </div>
+          </aside>
+
+          <!-- Text content -->
+          <div class="about-text">
+
+            <h2 class="reveal" id="about-heading" style="margin-bottom:1.75rem;">
+              Hi, I'm Estefany
+            </h2>
+
+            <p class="about-lead reveal reveal--d1">
+              I'm a UX designer specialising in AI-powered products, with a
+              particular obsession with the moment when a person first meets
+              an intelligent system — and what happens to their trust from that
+              point forward.
+            </p>
+
+            <p class="reveal reveal--d2">
+              My path into design started with a simple frustration: I kept
+              encountering software that felt like it was designed for the
+              engineers who built it, not the people who had to use it. So I
+              switched sides. Since then I've worked across fintech, health tech,
+              and enterprise AI — always asking the same question: whose mental
+              model does this interface actually match?
+            </p>
+
+            <p class="reveal reveal--d3">
+              What makes AI UX different — and endlessly interesting — is that
+              the system itself is uncertain. It doesn't always know the right
+              answer, and neither does the user. Designing for that mutual
+              uncertainty, in a way that still feels confident and safe, is the
+              challenge I show up for every day.
+            </p>
+
+            <!-- Skills pills -->
+            <div class="reveal" style="margin-top:2.5rem;">
+              <h3 style="margin-bottom:1.25rem; font-size:1rem; font-weight:600; color:var(--c-text);">
+                Skills &amp; tools
+              </h3>
+              <ul class="skills" role="list" aria-label="Skills and tools">
+                <li class="skill">🔬 User Research</li>
+                <li class="skill">🗺 Journey Mapping</li>
+                <li class="skill">📐 Wireframing</li>
+                <li class="skill">✨ Figma</li>
+                <li class="skill">🤖 AI / LLM Products</li>
+                <li class="skill">♿ Accessibility</li>
+                <li class="skill">🧪 Usability Testing</li>
+                <li class="skill">📊 Data Visualisation</li>
+                <li class="skill">🎙 Voice UX</li>
+                <li class="skill">📱 Responsive Design</li>
+                <li class="skill">🔄 Design Systems</li>
+                <li class="skill">📝 UX Writing</li>
+              </ul>
+            </div>
+
+            <!-- Core values -->
+            <div class="values reveal" style="margin-top:3rem;" aria-label="Core design values">
+              <h3 style="margin-bottom:1.25rem; font-size:1rem; font-weight:600; color:var(--c-text);">
+                What I believe
+              </h3>
+              <ul role="list">
+                <li class="value">
+                  <span class="value__num">01</span>
+                  <div>
+                    <p class="value__title">Clarity over cleverness</p>
+                    <p class="value__desc">
+                      Complexity is not sophistication. The most powerful designs
+                      are the ones where users never notice the design at all.
+                    </p>
+                  </div>
+                </li>
+                <li class="value">
+                  <span class="value__num">02</span>
+                  <div>
+                    <p class="value__title">Trust is designed, not assumed</p>
+                    <p class="value__desc">
+                      With AI especially, every output, every explanation, every
+                      error message is either building or eroding user confidence.
+                      Design for trust deliberately.
+                    </p>
+                  </div>
+                </li>
+                <li class="value">
+                  <span class="value__num">03</span>
+                  <div>
+                    <p class="value__title">Research before wireframes</p>
+                    <p class="value__desc">
+                      A beautiful screen that solves the wrong problem is still
+                      a failure. Understanding the problem space thoroughly is
+                      not optional — it's the work.
+                    </p>
+                  </div>
+                </li>
+                <li class="value">
+                  <span class="value__num">04</span>
+                  <div>
+                    <p class="value__title">Inclusive by default</p>
+                    <p class="value__desc">
+                      Designing for edge cases — cognitive load, low vision,
+                      non-native language — almost always improves the experience
+                      for everyone.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div><!-- /about-text -->
+        </div><!-- /about-grid -->
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         EDUCATION & EXPERIENCE STRIP
+    ==================================================================== -->
+    <section class="section" style="background:var(--c-surface); border-top:1px solid var(--c-border);" aria-labelledby="history-heading">
+      <div class="wrap">
+        <div class="sh reveal">
+          <p class="sh__label">Background</p>
+          <h2 class="sh__title" id="history-heading">Education &amp; experience</h2>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem;">
+
+          <!-- Education -->
+          <div class="reveal">
+            <h3 style="font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--c-accent); margin-bottom:1.5rem;">Education</h3>
+            <ul role="list">
+              <li style="padding-block:1.25rem; border-bottom:1px solid var(--c-border);">
+                <p style="font-size:0.8rem; color:var(--c-text-2); margin-bottom:0.3rem;">2023 – 2026</p>
+                <p style="font-weight:600; color:var(--c-text); margin-bottom:0.2rem; font-family:var(--font-heading);">BSc Computer Systems &amp; Internet Technologies</p>
+                <p style="font-size:0.875rem;">University of Greenwich, London</p>
+              </li>
+              <li style="padding-block:1.25rem; border-bottom:1px solid var(--c-border);">
+                <p style="font-size:0.8rem; color:var(--c-text-2); margin-bottom:0.3rem;">2021 – 2022</p>
+                <p style="font-weight:600; color:var(--c-text); margin-bottom:0.2rem; font-family:var(--font-heading);">UX Design Certification</p>
+                <p style="font-size:0.875rem;">Google / Coursera</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Experience -->
+          <div class="reveal reveal--d2">
+            <h3 style="font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--c-accent); margin-bottom:1.5rem;">Experience</h3>
+            <ul role="list">
+              <li style="padding-block:1.25rem; border-bottom:1px solid var(--c-border);">
+                <p style="font-size:0.8rem; color:var(--c-text-2); margin-bottom:0.3rem;">2024 – Present</p>
+                <p style="font-weight:600; color:var(--c-text); margin-bottom:0.2rem; font-family:var(--font-heading);">Freelance UX Designer</p>
+                <p style="font-size:0.875rem;">AI &amp; fintech clients — research, prototyping, testing</p>
+              </li>
+              <li style="padding-block:1.25rem; border-bottom:1px solid var(--c-border);">
+                <p style="font-size:0.8rem; color:var(--c-text-2); margin-bottom:0.3rem;">2022 – 2024</p>
+                <p style="font-weight:600; color:var(--c-text); margin-bottom:0.2rem; font-family:var(--font-heading);">Junior Product Designer</p>
+                <p style="font-size:0.875rem;">Health tech startup — end-to-end design, design system</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CTA
+    ==================================================================== -->
+    <section class="section--sm" style="border-top:1px solid var(--c-border);" aria-label="Call to action">
+      <div class="wrap" style="text-align:center;">
+        <div class="reveal">
+          <p style="margin-bottom:1rem; font-size:1.1rem; color:var(--c-text);">Want to work together?</p>
+          <a href="contact.html" class="btn btn--primary">Get in touch <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer__inner">
+        <p class="footer__copy">© 2025 Estefany Muniz. Designed with intention.</p>
+        <ul class="footer__links" role="list">
+          <li><a href="https://linkedin.com" class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">LinkedIn</a></li>
+          <li><a href="https://behance.net"  class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="Behance (opens in new tab)">Behance</a></li>
+          <li><a href="contact.html"         class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

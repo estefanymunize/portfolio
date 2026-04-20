@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Estefany Muniz — UX designer open to freelance and full-time AI design opportunities." />
+
+  <title>Contact — Estefany Muniz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- =====================================================================
+       NAVIGATION
+  ====================================================================== -->
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="wrap">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo">Estefany<em>.</em></a>
+
+          <ul class="nav__links" role="list">
+            <li><a href="index.html"   class="nav__link">Home</a></li>
+            <li><a href="about.html"   class="nav__link">About</a></li>
+            <li><a href="work.html"    class="nav__link">Work</a></li>
+            <li><a href="process.html" class="nav__link">Process</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+
+          <div class="nav__actions">
+            <button class="btn-icon theme-toggle" aria-label="Switch to light mode">☀</button>
+          </div>
+
+          <button class="nav__burger"
+                  aria-label="Open navigation menu"
+                  aria-expanded="false"
+                  aria-controls="mobile-drawer">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav__drawer" id="mobile-drawer" aria-label="Mobile navigation">
+        <a href="index.html"   class="nav__drawer-link">Home</a>
+        <a href="about.html"   class="nav__drawer-link">About</a>
+        <a href="work.html"    class="nav__drawer-link">Work</a>
+        <a href="process.html" class="nav__drawer-link">Process</a>
+        <a href="contact.html" class="nav__drawer-link">Contact</a>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================================================================
+         PAGE HERO
+    ==================================================================== -->
+    <section class="page-hero" aria-label="Page introduction">
+      <div class="wrap">
+        <p class="page-hero__label">Contact</p>
+        <h1 class="page-hero__title">
+          Let's build something<br /><span class="grad">worth using</span>
+        </h1>
+        <p class="page-hero__desc">
+          Whether you have a project brief, a half-formed idea, or just want
+          to talk about AI and design — my inbox is open.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CONTACT BODY
+    ==================================================================== -->
+    <section class="section" aria-labelledby="contact-heading">
+      <div class="wrap">
+        <h2 class="sr-only" id="contact-heading">Contact form and details</h2>
+
+        <!-- Visually hidden heading utility -->
+        <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}</style>
+
+        <div class="contact-grid">
+
+          <!-- ---------------------------------------------------------------
+               Left: info panel
+          ---------------------------------------------------------------- -->
+          <aside class="contact-info reveal" aria-label="Contact information">
+
+            <h3 class="contact-info__title">Get in touch</h3>
+            <p class="contact-info__desc">
+              I typically reply within one business day.
+              All enquiries welcome — large projects, quick questions, collaborations.
+            </p>
+
+            <ul class="contact-details" role="list">
+              <li>
+                <a href="mailto:munizstefanye@gmail.com" class="contact-row" aria-label="Send email to munizstefanye@gmail.com">
+                  <span class="contact-row__icon" aria-hidden="true">✉️</span>
+                  munizstefanye@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com" class="contact-row" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">
+                  <span class="contact-row__icon" aria-hidden="true">💼</span>
+                  linkedin.com/in/estefanymuniz
+                </a>
+              </li>
+              <li>
+                <a href="https://behance.net" class="contact-row" target="_blank" rel="noopener noreferrer" aria-label="Behance portfolio (opens in new tab)">
+                  <span class="contact-row__icon" aria-hidden="true">🎨</span>
+                  behance.net/estefanymuniz
+                </a>
+              </li>
+              <li>
+                <span class="contact-row">
+                  <span class="contact-row__icon" aria-hidden="true">📍</span>
+                  London, UK — remote friendly
+                </span>
+              </li>
+            </ul>
+
+            <!-- Availability badge -->
+            <div class="badge-available" role="status" aria-live="polite">
+              <span class="badge-available__dot" aria-hidden="true"></span>
+              Available for new projects
+            </div>
+
+          </aside>
+
+          <!-- ---------------------------------------------------------------
+               Right: contact form
+          ---------------------------------------------------------------- -->
+          <div class="contact-form reveal reveal--d2">
+
+            <!-- Success state — shown by JS after valid submission -->
+            <div class="form-success" role="alert" aria-live="polite">
+              <p class="form-success__icon" aria-hidden="true">✅</p>
+              <p class="form-success__title">Message sent!</p>
+              <p style="font-size:0.875rem; color:var(--c-text-2);">
+                Thanks for reaching out — I'll be in touch within one business day.
+              </p>
+            </div>
+
+            <!-- The form — hidden by JS on success -->
+            <form id="contact-form" novalidate aria-label="Contact form">
+
+              <!-- Name + email side-by-side on wider screens -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="f-name">Name <span aria-hidden="true">*</span></label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="f-name"
+                    name="name"
+                    autocomplete="name"
+                    placeholder="Your name"
+                    required
+                    aria-required="true"
+                    aria-describedby="err-name"
+                  />
+                  <span class="form-err" id="err-name" data-err="f-name" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="f-email">Email <span aria-hidden="true">*</span></label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="f-email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="you@example.com"
+                    required
+                    aria-required="true"
+                    aria-describedby="err-email"
+                  />
+                  <span class="form-err" id="err-email" data-err="f-email" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="f-subject">What's it about?</label>
+                <select class="form-select" id="f-subject" name="subject">
+                  <option value="">Select a topic…</option>
+                  <option value="freelance">Freelance / contract project</option>
+                  <option value="fulltime">Full-time opportunity</option>
+                  <option value="collab">Collaboration</option>
+                  <option value="speaking">Speaking / mentoring</option>
+                  <option value="other">Just saying hi</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="f-message">Message <span aria-hidden="true">*</span></label>
+                <textarea
+                  class="form-textarea"
+                  id="f-message"
+                  name="message"
+                  placeholder="Tell me about your project, timeline, and anything else that's useful…"
+                  required
+                  aria-required="true"
+                  aria-describedby="err-message"
+                ></textarea>
+                <span class="form-err" id="err-message" data-err="f-message" role="alert"></span>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center;">
+                Send message <span class="arrow" aria-hidden="true">→</span>
+              </button>
+
+              <p style="font-size:0.75rem; color:var(--c-text-2); margin-top:1rem; text-align:center;">
+                Your details are used solely to respond to your enquiry and are never shared.
+              </p>
+
+            </form>
+
+          </div><!-- /contact-form -->
+
+        </div><!-- /contact-grid -->
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         FAQ STRIP
+    ==================================================================== -->
+    <section class="section" style="background:var(--c-surface); border-top:1px solid var(--c-border);" aria-labelledby="faq-heading">
+      <div class="wrap--sm">
+
+        <div class="sh sh--center reveal">
+          <p class="sh__label">Quick answers</p>
+          <h2 class="sh__title" id="faq-heading">Common questions</h2>
+        </div>
+
+        <ul role="list" style="display:flex; flex-direction:column; gap:1px; border:1px solid var(--c-border); border-radius:var(--r-md); overflow:hidden;">
+
+          <li class="reveal" style="background:var(--c-bg); padding:1.5rem 1.75rem; border-bottom:1px solid var(--c-border);">
+            <h3 style="font-size:0.95rem; margin-bottom:0.4rem;">Are you available for freelance work?</h3>
+            <p style="font-size:0.875rem;">
+              Yes — I'm currently accepting freelance and contract projects,
+              especially in AI, fintech, and health tech. Remote-first, open to occasional on-site in London.
+            </p>
+          </li>
+
+          <li class="reveal reveal--d1" style="background:var(--c-bg); padding:1.5rem 1.75rem; border-bottom:1px solid var(--c-border);">
+            <h3 style="font-size:0.95rem; margin-bottom:0.4rem;">What's your typical project engagement?</h3>
+            <p style="font-size:0.875rem;">
+              It varies — I can join for a focused sprint (2–4 weeks) to audit and
+              fix a specific experience, or embed longer-term on a product team
+              for research, design, and testing cycles.
+            </p>
+          </li>
+
+          <li class="reveal reveal--d2" style="background:var(--c-bg); padding:1.5rem 1.75rem; border-bottom:1px solid var(--c-border);">
+            <h3 style="font-size:0.95rem; margin-bottom:0.4rem;">Do you work with early-stage startups?</h3>
+            <p style="font-size:0.875rem;">
+              Absolutely. Some of my most interesting work has been at the 0→1 stage,
+              helping founders understand their users before committing to a product direction.
+            </p>
+          </li>
+
+          <li class="reveal reveal--d3" style="background:var(--c-bg); padding:1.5rem 1.75rem;">
+            <h3 style="font-size:0.95rem; margin-bottom:0.4rem;">Can you help with accessibility audits?</h3>
+            <p style="font-size:0.875rem;">
+              Yes — accessibility review and remediation is a standard part of how
+              I work, not an add-on. I audit against WCAG 2.1 AA as a baseline.
+            </p>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer__inner">
+        <p class="footer__copy">© 2025 Estefany Muniz. Designed with intention.</p>
+        <ul class="footer__links" role="list">
+          <li><a href="https://linkedin.com" class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">LinkedIn</a></li>
+          <li><a href="https://behance.net"  class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="Behance (opens in new tab)">Behance</a></li>
+          <li><a href="about.html"           class="footer__link">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

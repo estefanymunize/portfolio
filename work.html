@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Work by Estefany Muniz — UX case studies in AI onboarding, trust design, voice UI, and content moderation." />
+
+  <title>Work — Estefany Muniz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- =====================================================================
+       NAVIGATION
+  ====================================================================== -->
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="wrap">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo">Estefany<em>.</em></a>
+
+          <ul class="nav__links" role="list">
+            <li><a href="index.html"   class="nav__link">Home</a></li>
+            <li><a href="about.html"   class="nav__link">About</a></li>
+            <li><a href="work.html"    class="nav__link">Work</a></li>
+            <li><a href="process.html" class="nav__link">Process</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+
+          <div class="nav__actions">
+            <button class="btn-icon theme-toggle" aria-label="Switch to light mode">☀</button>
+            <a href="contact.html" class="btn btn--primary">Let's talk</a>
+          </div>
+
+          <button class="nav__burger"
+                  aria-label="Open navigation menu"
+                  aria-expanded="false"
+                  aria-controls="mobile-drawer">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav__drawer" id="mobile-drawer" aria-label="Mobile navigation">
+        <a href="index.html"   class="nav__drawer-link">Home</a>
+        <a href="about.html"   class="nav__drawer-link">About</a>
+        <a href="work.html"    class="nav__drawer-link">Work</a>
+        <a href="process.html" class="nav__drawer-link">Process</a>
+        <a href="contact.html" class="nav__drawer-link">Contact</a>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================================================================
+         PAGE HERO
+    ==================================================================== -->
+    <section class="page-hero" aria-label="Page introduction">
+      <div class="wrap">
+        <p class="page-hero__label">Portfolio</p>
+        <h1 class="page-hero__title">
+          Work that moves the<br /><span class="grad">needle on trust</span>
+        </h1>
+        <p class="page-hero__desc">
+          Each project starts with a human problem and ends with a measurable
+          improvement. Click any card to read the story behind the solution.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         FULL WORK GRID
+    ==================================================================== -->
+    <section class="section" aria-labelledby="portfolio-heading">
+      <div class="wrap">
+
+        <h2 class="sr-only" id="portfolio-heading">All projects</h2>
+
+        <!-- Visually hidden heading for screen readers -->
+        <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}</style>
+
+        <div class="work-grid">
+
+          <!-- Project 1 -->
+          <article class="card reveal" data-modal aria-label="Open case study: Redesigning AI Onboarding">
+            <div class="card__thumb">
+              <!--
+                Add your screenshot here once available:
+                <img src="images/work-01.jpg" alt="Onboarding flow screens showing a friendly AI introduction sequence" />
+              -->
+              <div class="card__thumb-placeholder" aria-hidden="true">🤖</div>
+            </div>
+            <div class="card__body">
+              <ul class="tag-list" aria-label="Tags">
+                <li class="tag">Research</li>
+                <li class="tag">Interaction Design</li>
+                <li class="tag">AI</li>
+              </ul>
+              <h3 class="card__title">Redesigning Conversational AI Onboarding</h3>
+              <p class="card__excerpt">
+                Users were abandoning an AI assistant in the first session — not because
+                the AI was bad, but because the onboarding set the wrong expectations.
+                Through diary studies and contextual interviews I identified the
+                trust collapse moment, then redesigned the first-five-minutes experience
+                to anchor confidence before complexity. Drop-off fell 34%.
+              </p>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card reveal reveal--d1" data-modal aria-label="Open case study: AI Trust Dashboard">
+            <div class="card__thumb">
+              <!--
+                <img src="images/work-02.jpg" alt="Dashboard showing AI decision explanations with confidence scores and data sources" />
+              -->
+              <div class="card__thumb-placeholder" aria-hidden="true">📊</div>
+            </div>
+            <div class="card__body">
+              <ul class="tag-list" aria-label="Tags">
+                <li class="tag">Trust &amp; Safety</li>
+                <li class="tag">Data Visualisation</li>
+                <li class="tag">Enterprise</li>
+              </ul>
+              <h3 class="card__title">AI Trust &amp; Transparency Dashboard</h3>
+              <p class="card__excerpt">
+                A B2B platform needed to satisfy new EU AI Act transparency requirements
+                without turning every screen into a legal disclaimer. I designed a
+                "confidence layer" — a persistent but non-intrusive panel that explains
+                AI reasoning in plain language, giving users the context they need
+                without interrupting their workflow.
+              </p>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card reveal reveal--d2" data-modal aria-label="Open case study: Voice UI for Health Assistant">
+            <div class="card__thumb">
+              <!--
+                <img src="images/work-03.jpg" alt="Mobile screens showing voice interaction states for a health companion app" />
+              -->
+              <div class="card__thumb-placeholder" aria-hidden="true">🎙</div>
+            </div>
+            <div class="card__body">
+              <ul class="tag-list" aria-label="Tags">
+                <li class="tag">Voice UX</li>
+                <li class="tag">Multimodal</li>
+                <li class="tag">Health Tech</li>
+              </ul>
+              <h3 class="card__title">Voice UI for an AI Health Assistant</h3>
+              <p class="card__excerpt">
+                Designing voice interaction patterns for a health companion app where
+                users are often anxious or unwell. I created a multimodal system that
+                gracefully degrades from voice to touch, uses measured pacing in
+                responses, and never sounds cheerful when someone is in pain.
+                Satisfaction scores rose 28 points in testing.
+              </p>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="card reveal reveal--d3" data-modal aria-label="Open case study: AI Content Moderation Interface">
+            <div class="card__thumb">
+              <!--
+                <img src="images/work-04.jpg" alt="Moderation queue interface with AI confidence indicators and reviewer tools" />
+              -->
+              <div class="card__thumb-placeholder" aria-hidden="true">🛡</div>
+            </div>
+            <div class="card__body">
+              <ul class="tag-list" aria-label="Tags">
+                <li class="tag">Trust &amp; Safety</li>
+                <li class="tag">Human-in-Loop</li>
+                <li class="tag">Internal Tools</li>
+              </ul>
+              <h3 class="card__title">AI Content Moderation Interface</h3>
+              <p class="card__excerpt">
+                Human moderators using AI-assisted tools were experiencing high
+                decision fatigue and over-relying on model outputs. I redesigned
+                the review queue to surface model confidence alongside dissenting
+                signals, giving reviewers the information to exercise genuine
+                judgement rather than rubber-stamp AI decisions.
+              </p>
+            </div>
+          </article>
+
+          <!-- Project 5 — placeholder for user's own work -->
+          <article class="card reveal" data-modal aria-label="Open case study: Generative AI Design Tool">
+            <div class="card__thumb">
+              <!--
+                <img src="images/work-05.jpg" alt="Design tool interface with AI-generated component suggestions" />
+              -->
+              <div class="card__thumb-placeholder" aria-hidden="true">✨</div>
+            </div>
+            <div class="card__body">
+              <ul class="tag-list" aria-label="Tags">
+                <li class="tag">Generative AI</li>
+                <li class="tag">Design Tools</li>
+                <li class="tag">Productivity</li>
+              </ul>
+              <h3 class="card__title">Generative AI Design Assistant</h3>
+              <p class="card__excerpt">
+                Exploring how generative AI can accelerate — rather than replace —
+                the designer's creative process. A speculative project investigating
+                the right moment for AI to offer suggestions without hijacking
+                designer intent or homogenising output.
+              </p>
+            </div>
+          </article>
+
+          <!-- Project 6 — placeholder -->
+          <article class="card reveal reveal--d1" data-modal aria-label="Open case study: Ethical AI Audit Framework">
+            <div class="card__thumb">
+              <!--
+                <img src="images/work-06.jpg" alt="Audit framework document and checklist interface" />
+              -->
+              <div class="card__thumb-placeholder" aria-hidden="true">⚖️</div>
+            </div>
+            <div class="card__body">
+              <ul class="tag-list" aria-label="Tags">
+                <li class="tag">Ethics</li>
+                <li class="tag">Research</li>
+                <li class="tag">Framework</li>
+              </ul>
+              <h3 class="card__title">Ethical AI Experience Audit Framework</h3>
+              <p class="card__excerpt">
+                A lightweight, practitioner-facing framework for auditing AI-powered
+                interfaces against principles of fairness, transparency, and
+                user autonomy — designed to be usable by product teams without
+                requiring specialist ethics knowledge.
+              </p>
+            </div>
+          </article>
+
+        </div><!-- /work-grid -->
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CTA
+    ==================================================================== -->
+    <section class="section--sm" style="background:var(--c-surface); border-top:1px solid var(--c-border);" aria-label="Call to action">
+      <div class="wrap" style="text-align:center;">
+        <div class="reveal">
+          <h2 style="margin-bottom:1rem;">Working on something interesting?</h2>
+          <p style="margin-bottom:2rem; max-width:420px; margin-inline:auto;">
+            I'm open to new projects — especially ones at the intersection of
+            AI, ethics, and human-centred design.
+          </p>
+          <a href="contact.html" class="btn btn--primary">Start a conversation <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer__inner">
+        <p class="footer__copy">© 2025 Estefany Muniz. Designed with intention.</p>
+        <ul class="footer__links" role="list">
+          <li><a href="https://linkedin.com" class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">LinkedIn</a></li>
+          <li><a href="https://behance.net"  class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="Behance (opens in new tab)">Behance</a></li>
+          <li><a href="contact.html"         class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
