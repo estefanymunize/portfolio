@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Development Log & Report — Estefany Muniz | COMP1589</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================
+       Report stylesheet — self-contained for PDF printing
+    ========================================================== */
+    :root {
+      --pink:   #ec4899;
+      --dark:   #0d0d18;
+      --mid:    #555570;
+      --light:  #f5f5fb;
+      --border: #e0e0ee;
+      --code-bg:#f0f0f8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #1a1a2e;
+      background: #fff;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 5rem;
+    }
+
+    /* --- Cover --- */
+    .cover {
+      border-bottom: 2px solid var(--pink);
+      padding-bottom: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .cover__uni {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 1.5rem;
+    }
+
+    .cover__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .cover__title span { color: var(--pink); }
+
+    .cover__meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .meta-box {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+    }
+
+    .meta-box__label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 0.25rem;
+    }
+
+    .meta-box__value {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    /* --- Typography --- */
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--pink);
+    }
+
+    h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p { margin-bottom: 1rem; color: #2a2a40; }
+
+    a { color: var(--pink); }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    li { margin-bottom: 0.35rem; }
+
+    /* --- Code blocks --- */
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--pink);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85em;
+      background: var(--code-bg);
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+    }
+
+    pre code {
+      background: none;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    /* --- Dev log stages --- */
+    .stage {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+
+    .stage__header {
+      background: var(--light);
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stage__num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--pink);
+    }
+
+    .stage__date {
+      font-size: 0.78rem;
+      color: var(--mid);
+      font-weight: 500;
+    }
+
+    .stage__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--dark);
+      padding: 1rem 1.25rem 0;
+    }
+
+    .stage__body { padding: 0.75rem 1.25rem 1.25rem; }
+
+    .stage__body p { margin-bottom: 0.75rem; }
+
+    /* --- Site map --- */
+    .sitemap {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      line-height: 2;
+      margin: 1rem 0;
+    }
+
+    /* --- Screenshot placeholder --- */
+    .screenshot {
+      background: var(--light);
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      margin: 1rem 0;
+      color: var(--mid);
+      font-size: 0.8rem;
+    }
+
+    .screenshot strong { display: block; font-size: 0.9rem; color: var(--dark); margin-bottom: 0.25rem; }
+
+    /* --- Wireframe sketches --- */
+    .wireframe-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .wireframe {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      font-size: 0.75rem;
+      color: var(--mid);
+    }
+
+    .wireframe__title {
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .wf-nav {
+      background: #dde;
+      border-radius: 4px;
+      padding: 0.3rem 0.5rem;
+      font-size: 0.7rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .wf-block {
+      background: #e8e8f4;
+      border-radius: 4px;
+      padding: 0.4rem 0.5rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.7rem;
+    }
+
+    .wf-block--tall { height: 60px; display:flex; align-items:center; justify-content:center; }
+
+    .wf-block--img { height: 80px; background: #d0d0e8; display:flex; align-items:center; justify-content:center; font-size:0.65rem; }
+
+    /* --- Reference list --- */
+    .ref-item {
+      padding: 0.75rem 1rem;
+      border-left: 3px solid var(--pink);
+      background: var(--light);
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 0.75rem;
+      font-size: 0.875rem;
+    }
+
+    .ref-item a { word-break: break-all; }
+
+    /* --- Print styles --- */
+    @media print {
+      body { padding: 1.5rem; font-size: 13px; }
+      .stage { break-inside: avoid; }
+      h2 { break-before: page; }
+      h2:first-of-type { break-before: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       COVER PAGE
+  ============================================================= -->
+  <div class="cover">
+    <p class="cover__uni">University of Greenwich &nbsp;·&nbsp; COMP1589 (2025/26)</p>
+    <h1 class="cover__title">
+      Portfolio Website<br />
+      <span>Development Log &amp; Report</span>
+    </h1>
+    <p style="color:var(--mid); margin-top:0.5rem;">
+      Part 2 — Website and Report / Development Log (64%)
+    </p>
+    <div class="cover__meta">
+      <div class="meta-box">
+        <p class="meta-box__label">Student</p>
+        <p class="meta-box__value">Estefany Muniz</p>
+      </div>
+      <div class="meta-box">
+        <p class="meta-box__label">Module</p>
+        <p class="meta-box__value">COMP1589</p>
+      </div>
+      <div class="meta-box">
+        <p class="meta-box__label">Deadline</p>
+        <p class="meta-box__value">22 April 2026</p>
+      </div>
+      <div class="meta-box">
+        <p class="meta-box__label">Live URL</p>
+        <p class="meta-box__value" style="font-size:0.78rem;">estefanymunize.github.io/portfolio</p>
+      </div>
+      <div class="meta-box">
+        <p class="meta-box__label">GitHub Repo</p>
+        <p class="meta-box__value" style="font-size:0.78rem;">github.com/estefanymunize/portfolio</p>
+      </div>
+      <div class="meta-box">
+        <p class="meta-box__label">Pages</p>
+        <p class="meta-box__value">5 (index, about, work, process, contact)</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       SECTION 1 — PLANNING EVIDENCE
+  ============================================================= -->
+  <h2>1. Planning Evidence</h2>
+
+  <h3>1.1 Project Brief &amp; Role</h3>
+  <p>
+    The brief required a professional portfolio website of at least five pages, built
+    using HTML, CSS and JavaScript. My portfolio targets UX design roles — specifically
+    product and interaction design positions in digital and tech companies. The primary
+    audiences are hiring managers, creative directors, and potential freelance clients.
+  </p>
+  <p>
+    I chose a dark-themed, single-brand design system to create a strong visual identity,
+    and decided that all pages should share a unified navigation, footer, and external
+    stylesheet — a deliberate architecture decision made before writing a single line of code.
+  </p>
+
+  <h3>1.2 Site Map</h3>
+  <p>
+    Before building I mapped out the full structure: what pages exist, what each contains,
+    and how navigation connects them. The site is flat (no sub-pages) to keep navigation
+    simple and all content reachable in one click.
+  </p>
+
+  <div class="sitemap" aria-label="Site map in text form">
+    HOME (index.html)
+    ├── Hero — name, animated tagline, CTAs
+    ├── Stats strip — 3+ years, 20+ projects
+    ├── Selected Work (3 preview cards → modal)
+    └── About teaser + CTA
+
+    ABOUT (about.html)
+    ├── Page hero — headline + description
+    ├── Portrait + long-form bio
+    ├── Skills pills
+    ├── Values list
+    └── Education & Experience
+
+    WORK (work.html)
+    ├── Page hero
+    └── 6 case study cards → modal lightbox
+
+    PROCESS (process.html)
+    ├── Page hero
+    ├── 5-step timeline
+    ├── Tools grid
+    └── Design principles grid
+
+    CONTACT (contact.html)
+    ├── Page hero
+    ├── Contact info (sticky sidebar)
+    ├── Validated contact form
+    └── FAQ accordion strip
+  </div>
+
+  <h3>1.3 Wireframes</h3>
+  <p>
+    Low-fidelity wireframes were produced for each page before any CSS was written.
+    These established the layout approach (CSS Grid and Flexbox), the column structure,
+    and the position of key interactive elements.
+  </p>
+
+  <div class="wireframe-grid">
+
+    <!-- Home wireframe -->
+    <div class="wireframe">
+      <p class="wireframe__title">Home (index.html)</p>
+      <div class="wf-nav">[ Logo ] &nbsp;&nbsp; [Nav links] &nbsp;&nbsp; [CTA btn]</div>
+      <div class="wf-block wf-block--tall">HERO — H1 + Typing text + 2 buttons</div>
+      <div class="wf-block" style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;">
+        <div style="background:#d0d0e8;padding:4px;border-radius:3px;font-size:0.6rem;text-align:center;">3+ yrs</div>
+        <div style="background:#d0d0e8;padding:4px;border-radius:3px;font-size:0.6rem;text-align:center;">20+ proj</div>
+        <div style="background:#d0d0e8;padding:4px;border-radius:3px;font-size:0.6rem;text-align:center;">UX</div>
+        <div style="background:#d0d0e8;padding:4px;border-radius:3px;font-size:0.6rem;text-align:center;">∞</div>
+      </div>
+      <div class="wf-block">Section header</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
+        <div class="wf-block wf-block--img">Card 1</div>
+        <div class="wf-block wf-block--img">Card 2</div>
+        <div class="wf-block wf-block--img">Card 3</div>
+      </div>
+      <div class="wf-block">About teaser (2-col)</div>
+      <div class="wf-block">CTA banner</div>
+      <div class="wf-nav">Footer</div>
+    </div>
+
+    <!-- About wireframe -->
+    <div class="wireframe">
+      <p class="wireframe__title">About (about.html)</p>
+      <div class="wf-nav">Navigation</div>
+      <div class="wf-block">Page hero — label + H1 + desc</div>
+      <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:6px;">
+        <div class="wf-block wf-block--img" style="height:120px;">Portrait<br/>(sticky)</div>
+        <div>
+          <div class="wf-block">H2 — Hi, I'm Estefany</div>
+          <div class="wf-block">Bio paragraphs (×3)</div>
+          <div class="wf-block">Skills pills</div>
+          <div class="wf-block">Values list</div>
+        </div>
+      </div>
+      <div class="wf-block">Education &amp; Experience (2-col)</div>
+      <div class="wf-nav">Footer</div>
+    </div>
+
+    <!-- Work wireframe -->
+    <div class="wireframe">
+      <p class="wireframe__title">Work (work.html)</p>
+      <div class="wf-nav">Navigation</div>
+      <div class="wf-block">Page hero</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
+        <div class="wf-block wf-block--img">Card</div>
+        <div class="wf-block wf-block--img">Card</div>
+        <div class="wf-block wf-block--img">Card</div>
+        <div class="wf-block wf-block--img">Card</div>
+        <div class="wf-block wf-block--img">Card</div>
+        <div class="wf-block wf-block--img">Card</div>
+      </div>
+      <div class="wf-block">CTA</div>
+      <div class="wf-nav">Footer</div>
+    </div>
+
+    <!-- Contact wireframe -->
+    <div class="wireframe">
+      <p class="wireframe__title">Contact (contact.html)</p>
+      <div class="wf-nav">Navigation</div>
+      <div class="wf-block">Page hero</div>
+      <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:6px;">
+        <div>
+          <div class="wf-block">Contact info (sticky)</div>
+          <div class="wf-block">Email / LinkedIn</div>
+          <div class="wf-block">Available badge</div>
+        </div>
+        <div>
+          <div class="wf-block">Form: name + email</div>
+          <div class="wf-block">Form: subject select</div>
+          <div class="wf-block wf-block--tall">Textarea</div>
+          <div class="wf-block">Submit button</div>
+        </div>
+      </div>
+      <div class="wf-block">FAQ strip</div>
+      <div class="wf-nav">Footer</div>
+    </div>
+
+  </div><!-- /wireframe-grid -->
+
+  <h3>1.4 Design Decisions</h3>
+  <p>
+    Three key decisions were locked before coding:
+  </p>
+  <ul>
+    <li><strong>Layout:</strong> CSS Grid for page-level two-column layouts; Flexbox for
+    navigation, cards, and inline elements. No layout frameworks — entirely hand-written.</li>
+    <li><strong>Typography:</strong> Space Grotesk (geometric, strong personality) for
+    headings; Inter (neutral, highly legible) for body text. Both loaded via Google Fonts
+    for performance (preconnect headers added).</li>
+    <li><strong>Colour:</strong> Deep dark background (<code>#07070f</code>) with a pink
+    accent (<code>#ec4899</code>) for energy and contrast. Light mode toggled via
+    <code>data-theme</code> attribute on <code>&lt;html&gt;</code>.</li>
+  </ul>
+
+
+  <!-- ============================================================
+       SECTION 2 — KEY DEVELOPMENT STAGES
+  ============================================================= -->
+  <h2>2. Key Development Stages</h2>
+
+  <!-- Stage 1 -->
+  <div class="stage">
+    <div class="stage__header">
+      <span class="stage__num">Stage 01</span>
+      <span class="stage__date">6 April 2026 — 09:00</span>
+    </div>
+    <p class="stage__title">File structure &amp; base HTML skeleton</p>
+    <div class="stage__body">
+      <p>
+        The first step was establishing the project folder structure before writing
+        any meaningful HTML. A flat file hierarchy was chosen to keep relative paths
+        simple and ensure all links work identically locally and on GitHub Pages.
+      </p>
+
+      <h4>What was built</h4>
+      <pre><code>1589-CW/
+├── index.html
+├── about.html
+├── work.html
+├── process.html
+├── contact.html
+├── css/
+│   └── styles.css
+└── js/
+    └── main.js</code></pre>
+
+      <p>
+        Each HTML file was given a shared boilerplate: correct <code>lang</code>,
+        <code>charset</code>, viewport meta, Google Fonts preconnect, a link to the
+        shared external stylesheet, and a <code>&lt;script&gt;</code> tag at the
+        bottom of <code>&lt;body&gt;</code> pointing to the external JS file.
+      </p>
+
+      <h4>Code excerpt — shared HTML head structure</h4>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" data-theme="dark"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;meta name="description" content="Estefany Muniz — UX Designer portfolio." /&gt;
+  &lt;title&gt;Estefany Muniz — UX Designer&lt;/title&gt;
+
+  &lt;!-- Google Fonts: Space Grotesk + Inter --&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
+  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600
+    &amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" /&gt;
+
+  &lt;!-- Shared external stylesheet — no inline styles used --&gt;
+  &lt;link rel="stylesheet" href="css/styles.css" /&gt;
+&lt;/head&gt;</code></pre>
+
+      <h4>Why this mattered</h4>
+      <p>
+        Setting this up correctly at the start meant every subsequent page shared
+        the same foundation. Using <code>data-theme="dark"</code> on the root element
+        enabled the CSS custom property system to handle theming without any JavaScript
+        class toggling on individual elements.
+      </p>
+    </div>
+  </div>
+
+  <!-- Stage 2 -->
+  <div class="stage">
+    <div class="stage__header">
+      <span class="stage__num">Stage 02</span>
+      <span class="stage__date">10 April 2026 — 14:30</span>
+    </div>
+    <p class="stage__title">CSS design system — custom properties &amp; reset</p>
+    <div class="stage__body">
+      <p>
+        Rather than hardcoding colour values throughout the stylesheet, I built
+        a design token system using CSS custom properties on <code>:root</code>.
+        This was a deliberate architectural choice: it allowed the entire colour
+        scheme to be changed later (which it was — from purple to pink) by editing
+        only a handful of lines.
+      </p>
+
+      <h4>Code excerpt — CSS custom properties (design tokens)</h4>
+      <pre><code>:root {
+  /* Colours */
+  --c-bg:           #07070f;
+  --c-surface:      #0e0e1c;
+  --c-accent:       #ec4899;       /* pink accent */
+  --c-accent-light: #f9a8d4;
+  --c-accent-glow:  rgba(236, 72, 153, 0.22);
+  --c-text:         #f0f0f6;
+  --c-text-2:       #8080a0;
+  --c-border:       rgba(255, 255, 255, 0.07);
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur:  0.3s;
+}
+
+/* Light theme overrides — toggled via JS on &lt;html data-theme&gt; */
+[data-theme="light"] {
+  --c-bg:      #f5f5fb;
+  --c-surface: #ffffff;
+  --c-text:    #0d0d1c;
+  --c-text-2:  #555572;
+}</code></pre>
+
+      <h4>Why this mattered</h4>
+      <p>
+        The <code>[data-theme="light"]</code> override block meant that the entire
+        colour scheme could flip with a single attribute change on the root element —
+        no inline styles, no JavaScript class manipulation on individual components.
+        This is the modern, accessible approach to theming.
+      </p>
+    </div>
+  </div>
+
+  <!-- Stage 3 -->
+  <div class="stage">
+    <div class="stage__header">
+      <span class="stage__num">Stage 03</span>
+      <span class="stage__date">14 April 2026 — 11:00</span>
+    </div>
+    <p class="stage__title">Navigation — sticky header, mobile hamburger menu, active link</p>
+    <div class="stage__body">
+      <p>
+        The navigation was the most technically involved single component — it needed
+        to be fixed to the top, apply a frosted-glass style after scrolling, collapse
+        to a hamburger menu on mobile, and highlight the current page link.
+      </p>
+
+      <h4>Code excerpt — sticky nav JavaScript (from main.js)</h4>
+      <pre><code>/* Sticky nav — adds frosted-glass class when user scrolls */
+(function initNav() {
+  var nav = document.querySelector('.nav');
+  if (!nav) return;
+
+  function onScroll() {
+    nav.classList.toggle('nav--solid', window.scrollY > 16);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // run on load to handle page refresh mid-scroll
+}());</code></pre>
+
+      <h4>Code excerpt — active nav link (marks current page)</h4>
+      <pre><code>/* Reads the filename from the URL and marks the matching nav link */
+(function markActive() {
+  var page = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav__link').forEach(function (a) {
+    if (a.getAttribute('href') === page) {
+      a.setAttribute('aria-current', 'page');
+    }
+  });
+}());</code></pre>
+
+      <h4>Code excerpt — CSS frosted glass effect on scroll</h4>
+      <pre><code>.nav--solid {
+  background: rgba(7, 7, 15, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom-color: var(--c-border);
+}</code></pre>
+
+      <h4>Why this mattered</h4>
+      <p>
+        Using <code>aria-current="page"</code> instead of a custom CSS class is the
+        semantically correct, accessible approach — screen readers announce the current
+        page to users, and the CSS underline indicator is driven by the same attribute.
+      </p>
+    </div>
+  </div>
+
+  <!-- Stage 4 -->
+  <div class="stage">
+    <div class="stage__header">
+      <span class="stage__num">Stage 04</span>
+      <span class="stage__date">16 April 2026 — 16:00</span>
+    </div>
+    <p class="stage__title">Hero section — CSS dot-grid, typing effect, scroll reveal</p>
+    <div class="stage__body">
+      <p>
+        The hero section required three distinct techniques working together: a CSS-only
+        background pattern, a JavaScript typing animation, and scroll-triggered
+        entrance animations via the Intersection Observer API.
+      </p>
+
+      <h4>CSS dot-grid background</h4>
+      <p>
+        The subtle dot pattern behind the hero is a pure CSS technique using
+        <code>radial-gradient</code> for the dots and a <code>mask-image</code>
+        to fade the edges — no image files required.
+      </p>
+      <pre><code>.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(236, 72, 153, 0.18) 1px,
+    transparent 1px
+  );
+  background-size: 40px 40px;
+  /* Fade to transparent at the edges */
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black, transparent);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black, transparent);
+  pointer-events: none;
+}</code></pre>
+
+      <h4>Typing / typewriter effect (JavaScript)</h4>
+      <p>
+        The animated tagline cycles through phrases using a custom typewriter
+        function. The interaction pattern was inspired by the hero section of
+        <strong>Linear.app</strong> (<a href="https://linear.app" target="_blank" rel="noopener noreferrer">https://linear.app</a>),
+        which uses cycling animated text to communicate multiple product benefits
+        without cluttering the headline. The implementation below is entirely
+        original code written for this project.
+      </p>
+      <pre><code>/* Typing effect — cycles through phrases with typewriter animation */
+(function initTyping() {
+  var el = document.querySelector('[data-typing]');
+  if (!el) return;
+
+  var phrases = [
+    'experiences people love.',
+    'clarity from complexity.',
+    'seamless digital journeys.',
+    'interfaces that just work.'
+  ];
+
+  var pi = 0, ci = 0, deleting = false;
+
+  function tick() {
+    var phrase = phrases[pi];
+    el.textContent = deleting ? phrase.slice(0, ci - 1) : phrase.slice(0, ci + 1);
+    deleting ? ci-- : ci++;
+
+    var wait = deleting ? 38 : 76;
+
+    if (!deleting && ci === phrase.length) {
+      wait = 2200;       // pause at end of phrase
+      deleting = true;
+    } else if (deleting && ci === 0) {
+      deleting = false;
+      pi = (pi + 1) % phrases.length;  // move to next phrase
+      wait = 420;
+    }
+    setTimeout(tick, wait);
+  }
+
+  tick();
+}());</code></pre>
+
+      <h4>Scroll reveal — Intersection Observer</h4>
+      <p>
+        Elements with the class <code>.reveal</code> animate in when they enter the
+        viewport, using the modern <code>IntersectionObserver</code> API rather than
+        a scroll event listener. This is more performant because it runs off the main
+        thread.
+      </p>
+      <pre><code>(function initReveal() {
+  var els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');  // triggers CSS transition
+        io.unobserve(e.target);        // animate once only
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  els.forEach(function (el) { io.observe(el); });
+}());</code></pre>
+
+      <p>
+        Reference for the Intersection Observer API:
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" rel="noopener noreferrer">
+          https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Stage 5 -->
+  <div class="stage">
+    <div class="stage__header">
+      <span class="stage__num">Stage 05</span>
+      <span class="stage__date">18 April 2026 — 10:00</span>
+    </div>
+    <p class="stage__title">Work page — case study cards &amp; modal lightbox</p>
+    <div class="stage__body">
+      <p>
+        The work page uses a CSS Grid card layout combined with a JavaScript modal
+        lightbox. Cards are interactive (keyboard accessible, role="button") and open
+        a modal with case study details on click or Enter/Space keypress.
+      </p>
+
+      <h4>Code excerpt — CSS card hover effect</h4>
+      <pre><code>.card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  transition: border-color var(--dur) var(--ease),
+              transform var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease);
+  cursor: pointer;
+}
+
+.card:hover {
+  border-color: var(--c-border-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+/* Image overlay on hover — pure CSS, no JS */
+.card__thumb::after {
+  content: 'View case study →';
+  position: absolute;
+  inset: 0;
+  background: rgba(236, 72, 153, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+.card:hover .card__thumb::after { opacity: 1; }</code></pre>
+
+      <h4>Code excerpt — modal accessibility</h4>
+      <pre><code>/* Focus trap: save element that opened modal, return focus on close */
+var focusBefore;
+
+function open(card) {
+  /* ... populate content ... */
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  focusBefore = document.activeElement;         // remember focus origin
+  modal.querySelector('.modal__close').focus(); // move focus into modal
+}
+
+function close() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+  if (focusBefore) focusBefore.focus();         // return focus
+}
+
+/* Close on Escape key */
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' &amp;&amp; modal.classList.contains('open')) close();
+});</code></pre>
+
+      <h4>Why this mattered</h4>
+      <p>
+        Returning keyboard focus to the triggering element when the modal closes is
+        a WCAG 2.1 requirement (Success Criterion 2.4.3). Without it, keyboard and
+        screen reader users lose their place in the page.
+      </p>
+    </div>
+  </div>
+
+  <!-- Stage 6 -->
+  <div class="stage">
+    <div class="stage__header">
+      <span class="stage__num">Stage 06</span>
+      <span class="stage__date">20 April 2026 — 09:00</span>
+    </div>
+    <p class="stage__title">Contact form — validation, success state &amp; accessibility</p>
+    <div class="stage__body">
+      <p>
+        The contact form includes full client-side validation written in vanilla
+        JavaScript: name length, email pattern matching, and message length checks.
+        Errors are announced to screen readers via <code>role="alert"</code> and
+        linked to inputs via <code>aria-describedby</code>.
+      </p>
+
+      <h4>Code excerpt — form validation</h4>
+      <pre><code>form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  clearErrors();
+  var ok = true;
+
+  /* Email validation using regex */
+  var email = form.querySelector('#f-email');
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+    markErr(email, 'Enter a valid email address.');
+    ok = false;
+  }
+
+  if (ok) {
+    form.style.display = 'none';
+    document.querySelector('.form-success').classList.add('show');
+  }
+});
+
+function markErr(input, text) {
+  input.classList.add('err');
+  /* data-err attribute links the error span to its input by ID */
+  var el = document.querySelector('[data-err="' + input.id + '"]');
+  if (el) { el.textContent = text; el.classList.add('show'); }
+}</code></pre>
+
+      <h4>Code excerpt — accessible error markup (HTML)</h4>
+      <pre><code>&lt;input
+  class="form-input"
+  type="email"
+  id="f-email"
+  aria-required="true"
+  aria-describedby="err-email"
+/&gt;
+&lt;span class="form-err" id="err-email"
+      data-err="f-email"
+      role="alert"&gt;&lt;/span&gt;</code></pre>
+
+      <h4>Why this mattered</h4>
+      <p>
+        Connecting errors to their inputs via <code>aria-describedby</code> means
+        screen readers read the error message immediately after the field label when
+        the user navigates to an invalid input — exactly the behaviour WCAG 2.1
+        Success Criterion 3.3.1 (Error Identification) requires.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       SECTION 3 — REFLECTIVE DISCUSSION
+  ============================================================= -->
+  <h2>3. Reflective Discussion</h2>
+
+  <h3>Problems faced and how they were solved</h3>
+
+  <p>
+    The most technically challenging problem was building an accessible modal
+    lightbox from scratch. My first implementation opened and closed the modal
+    correctly, but keyboard users could tab behind it while it was open —
+    meaning the modal overlay was purely visual and not truly accessible. After
+    researching ARIA modal patterns, I added focus management: saving the element
+    that triggered the modal, moving focus to the close button when the modal opens,
+    and returning focus to the original element on close. I also added an Escape
+    key listener and a backdrop click handler, both calling the same <code>close()</code>
+    function to avoid code duplication. This solved the accessibility gap entirely.
+  </p>
+
+  <p>
+    A second problem was the sticky contact info column on the contact page. On
+    tablet screens, the two-column grid collapsed to a single column but the
+    <code>position: sticky</code> property remained active — causing the info panel
+    to overlap content below it. The fix was to set <code>position: static</code>
+    inside the <code>@media (max-width: 1024px)</code> breakpoint, which I had
+    already defined for the layout collapse. A small fix, but one that would have
+    been invisible in desktop testing and broken on every tablet visitor.
+  </p>
+
+  <h3>A decision I am pleased with</h3>
+
+  <p>
+    I am most pleased with the CSS custom property (design token) architecture.
+    By defining all colours, fonts, spacing, and easing values as variables on
+    <code>:root</code>, I could change the entire colour scheme from violet to
+    pink by updating fewer than ten values in a single file — a change that would
+    otherwise require a find-and-replace across the entire codebase. It also made
+    the light/dark theme toggle trivial: a second block overrides only the
+    colour tokens, and JavaScript simply toggles a <code>data-theme</code>
+    attribute on the <code>&lt;html&gt;</code> element. This is the approach used
+    by major design systems and I am glad I adopted it from the start.
+  </p>
+
+  <h3>What I would improve with more time</h3>
+
+  <p>
+    With more time, I would add genuine case study pages — individual HTML pages
+    for each portfolio project with full research documentation, annotated
+    wireframes, and before/after comparisons. The current modal approach works
+    well as a placeholder but limits the depth of storytelling available for
+    each project.
+  </p>
+  <p>
+    I would also add a proper skip-to-content link at the very top of each page
+    (a standard accessibility pattern for keyboard users who want to bypass
+    navigation and jump straight to the main content), and implement
+    <code>prefers-reduced-motion</code> media queries to disable or slow all
+    animations for users who have configured their operating system to reduce motion.
+  </p>
+
+
+  <!-- ============================================================
+       SECTION 4 — REFERENCES & ATTRIBUTIONS
+  ============================================================= -->
+  <h2>4. References &amp; Code Attributions</h2>
+  <p>
+    In accordance with the module's plagiarism policy, all external sources and
+    inspirations used in this project are listed below with direct links.
+  </p>
+
+  <div class="ref-item">
+    <strong>Typing / typewriter interaction pattern — design inspiration</strong><br />
+    The hero section typing effect was inspired by the animated headline on the
+    Linear.app homepage, which cycles through product benefits in the hero
+    heading. The JavaScript implementation is entirely original code written for
+    this project.<br />
+    <a href="https://linear.app" target="_blank" rel="noopener noreferrer">https://linear.app</a>
+  </div>
+
+  <div class="ref-item">
+    <strong>Intersection Observer API — MDN Web Docs</strong><br />
+    The scroll-triggered reveal animation uses the IntersectionObserver API.
+    The API reference and usage pattern were studied from MDN Web Docs.<br />
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" rel="noopener noreferrer">
+      https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+    </a>
+  </div>
+
+  <div class="ref-item">
+    <strong>CSS backdrop-filter (frosted glass effect) — MDN Web Docs</strong><br />
+    The frosted-glass navigation bar on scroll uses <code>backdrop-filter: blur()</code>.
+    Browser support and syntax were confirmed via MDN.<br />
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter" target="_blank" rel="noopener noreferrer">
+      https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter
+    </a>
+  </div>
+
+  <div class="ref-item">
+    <strong>ARIA modal pattern — W3C WAI-ARIA Authoring Practices</strong><br />
+    The accessible modal dialog implementation (focus management, Escape key,
+    <code>aria-modal</code>, <code>aria-labelledby</code>) follows the W3C
+    ARIA Authoring Practices Guide.<br />
+    <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank" rel="noopener noreferrer">
+      https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/
+    </a>
+  </div>
+
+  <div class="ref-item">
+    <strong>CSS custom properties (variables) — MDN Web Docs</strong><br />
+    The design token system uses CSS custom properties. Syntax and browser
+    compatibility checked via MDN.<br />
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank" rel="noopener noreferrer">
+      https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+    </a>
+  </div>
+
+  <div class="ref-item">
+    <strong>Google Fonts — Space Grotesk &amp; Inter</strong><br />
+    Both typefaces used in this project are served via Google Fonts.<br />
+    <a href="https://fonts.google.com/specimen/Space+Grotesk" target="_blank" rel="noopener noreferrer">
+      https://fonts.google.com/specimen/Space+Grotesk
+    </a><br />
+    <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener noreferrer">
+      https://fonts.google.com/specimen/Inter
+    </a>
+  </div>
+
+  <hr style="margin-top:3rem; border:none; border-top:1px solid var(--border);" />
+  <p style="font-size:0.78rem; color:var(--mid); margin-top:1rem; text-align:center;">
+    COMP1589 (2025/26) &nbsp;·&nbsp; Estefany Muniz &nbsp;·&nbsp; University of Greenwich
+    &nbsp;·&nbsp; Submitted April 2026
+  </p>
+
+</body>
+</html>

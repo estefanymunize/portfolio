@@ -11,13 +11,13 @@
   --c-bg:           #07070f;
   --c-surface:      #0e0e1c;
   --c-surface-2:    #16162a;
-  --c-accent:       #7b5cf0;
-  --c-accent-light: #a78bfa;
-  --c-accent-glow:  rgba(123, 92, 240, 0.22);
+  --c-accent:       #ec4899;
+  --c-accent-light: #f9a8d4;
+  --c-accent-glow:  rgba(236, 72, 153, 0.22);
   --c-text:         #f0f0f6;
   --c-text-2:       #8080a0;
   --c-border:       rgba(255, 255, 255, 0.07);
-  --c-border-hover: rgba(123, 92, 240, 0.45);
+  --c-border-hover: rgba(236, 72, 153, 0.45);
 
   /* Typography */
   --font-heading: 'Space Grotesk', sans-serif;
@@ -653,7 +653,7 @@ p {
   border-radius: 100px;
   background: var(--c-accent-glow);
   color: var(--c-accent-light);
-  border: 1px solid rgba(123, 92, 240, 0.18);
+  border: 1px solid rgba(236, 72, 153, 0.18);
 }
 
 .card__title {

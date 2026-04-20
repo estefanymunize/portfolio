@@ -65,12 +65,12 @@
       <div class="wrap">
         <p class="page-hero__label">How I work</p>
         <h1 class="page-hero__title">
-          A process built for<br /><span class="grad">systems that learn</span>
+          A process built around<br /><span class="grad">understanding people</span>
         </h1>
         <p class="page-hero__desc">
-          Designing for AI requires a different discipline. The interface is
-          only part of the problem — you're also designing for uncertainty,
-          model behaviour, and the trust people extend to machines.
+          Good design doesn't happen by accident. It starts with deep
+          curiosity about people, and ends only when something genuinely
+          works for them — not just looks like it should.
         </p>
       </div>
     </section>
@@ -101,8 +101,7 @@
               understanding who the users are, what they actually need (not what
               stakeholders assume they need), and where the current experience
               breaks down. Methods include contextual interviews, diary studies,
-              competitive benchmarking, and — for AI products — model capability
-              audits to understand what the system can realistically do.
+              surveys, competitive benchmarking, and heuristic evaluations.
             </p>
           </li>
 
@@ -112,9 +111,8 @@
             <p class="process-item__desc">
               Research generates noise. This stage turns it into signal: clear
               problem statements, prioritised user needs, and explicit design
-              principles for the project. For AI products I also define the
-              "trust contract" — what the system promises to users, what it
-              cannot guarantee, and how those limits should be communicated.
+              principles for the project. How-Might-We questions, affinity
+              mapping, and Jobs-to-be-Done framing all live here.
             </p>
           </li>
 
@@ -124,9 +122,8 @@
             <p class="process-item__desc">
               I sketch wide before going deep — low-fidelity explorations that
               challenge assumptions without investing in pixels. Once the right
-              direction emerges I build interactive prototypes at the fidelity
-              needed for meaningful testing. For conversational and voice
-              interfaces I prototype the dialogue before the UI.
+              direction emerges I build interactive prototypes in Figma at the
+              fidelity needed for meaningful testing.
             </p>
           </li>
 
@@ -136,9 +133,8 @@
             <p class="process-item__desc">
               Testing is not a gate at the end — it's woven into every stage.
               Moderated usability sessions, unmoderated remote tests, and
-              A/B experiments all serve different questions. For AI interfaces
-              I pay particular attention to how users calibrate trust over
-              repeated interactions, not just the first session.
+              A/B experiments all serve different questions. I pay particular
+              attention to edge cases and the moments where users hesitate.
             </p>
           </li>
 
@@ -149,8 +145,7 @@
               Launch is the beginning, not the end. I work closely with
               engineering through handoff, write thorough design specs, and
               stay close to the product post-launch to catch edge cases
-              that only real usage surfaces. AI products in particular
-              need ongoing design attention as model behaviour changes.
+              that only real usage reveals. Good products are never truly finished.
             </p>
           </li>
 
@@ -227,47 +222,45 @@
       <div class="wrap">
 
         <div class="sh reveal">
-          <p class="sh__label">My north star</p>
-          <h2 class="sh__title" id="principles-heading">Principles for AI experience design</h2>
+          <p class="sh__label">What I believe</p>
+          <h2 class="sh__title" id="principles-heading">Core design principles</h2>
         </div>
 
-        <!-- Grid of principle cards -->
         <ul style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:1.25rem;" role="list" aria-label="Design principles">
 
           <li class="reveal" style="background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--r-md); padding:1.75rem;">
             <p style="font-size:1.5rem; margin-bottom:0.75rem;" aria-hidden="true">🔍</p>
-            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Explain, don't just show</h3>
+            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Research before pixels</h3>
             <p style="font-size:0.875rem;">
-              AI outputs without context are just assertions. Good design
-              makes the reasoning visible enough that users can evaluate it.
+              The best-looking interface in the world means nothing if it
+              solves the wrong problem. Understanding the person always comes first.
             </p>
           </li>
 
           <li class="reveal reveal--d1" style="background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--r-md); padding:1.75rem;">
             <p style="font-size:1.5rem; margin-bottom:0.75rem;" aria-hidden="true">🎛</p>
-            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Give control back</h3>
+            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Clarity over cleverness</h3>
             <p style="font-size:0.875rem;">
-              Every AI action should have a clear undo, override, or
-              feedback mechanism. Helpfulness without agency is paternalism.
+              Complexity is not sophistication. If a user needs a tooltip,
+              the design has already failed. Simple is harder — and better.
             </p>
           </li>
 
           <li class="reveal reveal--d2" style="background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--r-md); padding:1.75rem;">
-            <p style="font-size:1.5rem; margin-bottom:0.75rem;" aria-hidden="true">⚠️</p>
-            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Design for failure</h3>
+            <p style="font-size:1.5rem; margin-bottom:0.75rem;" aria-hidden="true">🔁</p>
+            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Test early, test often</h3>
             <p style="font-size:0.875rem;">
-              Models get things wrong. The question is whether the interface
-              helps users catch and recover from errors — or hides them.
+              Assumptions are expensive. Getting something in front of real
+              users — even rough — beats polishing something nobody wants.
             </p>
           </li>
 
           <li class="reveal reveal--d3" style="background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--r-md); padding:1.75rem;">
             <p style="font-size:1.5rem; margin-bottom:0.75rem;" aria-hidden="true">♿</p>
-            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Accessibility is non-negotiable</h3>
+            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Inclusive by default</h3>
             <p style="font-size:0.875rem;">
-              AI tools that are inaccessible to users with disabilities
-              amplify existing inequalities. Inclusive design is a
-              requirement, not a nice-to-have.
+              Designing for edge cases — cognitive load, low vision, motor
+              impairments — almost always improves the experience for everyone.
             </p>
           </li>
 
@@ -281,7 +274,7 @@
       <div class="wrap" style="text-align:center;">
         <div class="reveal">
           <p style="color:var(--c-text); font-size:1.05rem; margin-bottom:1.5rem;">
-            Want to bring this approach to your product?
+            Want to work together on something?
           </p>
           <a href="contact.html" class="btn btn--primary">Let's talk <span class="arrow" aria-hidden="true">→</span></a>
         </div>

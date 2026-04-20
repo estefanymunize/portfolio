@@ -108,10 +108,10 @@
   if (!el) return;
 
   var phrases = [
-    'AI experiences people trust.',
+    'experiences people love.',
     'clarity from complexity.',
-    'the future, responsibly.',
-    'interfaces that think ahead.'
+    'seamless digital journeys.',
+    'interfaces that just work.'
   ];
 
   var pi = 0, ci = 0, deleting = false;
