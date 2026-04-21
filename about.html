@@ -71,8 +71,115 @@
 
           <!-- Sticky portrait column -->
           <aside class="about-photo reveal" aria-label="Portrait of Estefany Muniz">
-            <div class="about-photo__frame">
-              <div class="about-photo__placeholder" aria-hidden="true">👩🏽‍💻</div>
+            <div class="about-photo__frame" style="background:transparent;border:none;padding:0.5rem;">
+              <!-- Inline animated SVG — girl at laptop, brown hair, light skin -->
+              <svg viewBox="0 0 320 360" xmlns="http://www.w3.org/2000/svg"
+                   style="width:100%;max-width:340px;margin:0 auto;display:block;"
+                   aria-label="Illustration of a girl working at a laptop" role="img">
+                <style>
+                  @keyframes float   { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-10px)} }
+                  @keyframes blink   { 0%,90%,100%{transform:scaleY(1)}  95%{transform:scaleY(0.1)} }
+                  @keyframes type    { 0%,100%{transform:translateX(0)}   25%{transform:translateX(2px)} 75%{transform:translateX(-2px)} }
+                  @keyframes glow    { 0%,100%{opacity:.55}               50%{opacity:.85} }
+                  @keyframes cursor  { 0%,49%{opacity:1}                  50%,100%{opacity:0} }
+                  .figure-group      { animation: float 4s ease-in-out infinite; }
+                  .eyes              { animation: blink 4s ease-in-out infinite; transform-origin:center; }
+                  .hands             { animation: type  0.4s ease-in-out infinite; }
+                  .screen-glow       { animation: glow  2.5s ease-in-out infinite; }
+                  .cursor-blink      { animation: cursor 1s step-end infinite; }
+                </style>
+
+                <!-- Shadow -->
+                <ellipse cx="160" cy="330" rx="75" ry="12" fill="rgba(0,0,0,.12)"/>
+
+                <g class="figure-group">
+                  <!-- Desk -->
+                  <rect x="40" y="255" width="240" height="14" rx="4" fill="#c8a882"/>
+                  <rect x="70" y="269" width="10" height="50" rx="3" fill="#b8987a"/>
+                  <rect x="240" y="269" width="10" height="50" rx="3" fill="#b8987a"/>
+
+                  <!-- Laptop base -->
+                  <rect x="80" y="220" width="160" height="36" rx="6" fill="#2d2d3a"/>
+                  <!-- Laptop lid -->
+                  <rect x="82" y="140" width="156" height="82" rx="6" fill="#2d2d3a"/>
+                  <!-- Screen -->
+                  <rect x="90" y="147" width="140" height="68" rx="3" fill="#0d0d18"/>
+                  <!-- Screen glow -->
+                  <rect class="screen-glow" x="90" y="147" width="140" height="68" rx="3"
+                        fill="url(#screenGrad)"/>
+                  <!-- Code lines on screen -->
+                  <rect x="96" y="155" width="55" height="4" rx="2" fill="#ec4899" opacity=".8"/>
+                  <rect x="100" y="163" width="80" height="4" rx="2" fill="#a5f3fc" opacity=".6"/>
+                  <rect x="100" y="171" width="60" height="4" rx="2" fill="#a5f3fc" opacity=".6"/>
+                  <rect x="100" y="179" width="90" height="4" rx="2" fill="#c4b5fd" opacity=".6"/>
+                  <rect x="100" y="187" width="40" height="4" rx="2" fill="#a5f3fc" opacity=".6"/>
+                  <!-- Blinking cursor -->
+                  <rect class="cursor-blink" x="142" y="187" width="3" height="8" rx="1" fill="#ec4899"/>
+                  <!-- Keyboard -->
+                  <rect x="88" y="228" width="144" height="22" rx="3" fill="#1e1e2e"/>
+                  <g class="hands">
+                    <rect x="95" y="232" width="8" height="5" rx="1" fill="#383850" opacity=".7"/>
+                    <rect x="107" y="232" width="8" height="5" rx="1" fill="#383850" opacity=".7"/>
+                    <rect x="119" y="232" width="8" height="5" rx="1" fill="#383850" opacity=".7"/>
+                    <rect x="131" y="232" width="8" height="5" rx="1" fill="#383850" opacity=".7"/>
+                    <rect x="173" y="232" width="8" height="5" rx="1" fill="#383850" opacity=".7"/>
+                    <rect x="185" y="232" width="8" height="5" rx="1" fill="#383850" opacity=".7"/>
+                    <rect x="197" y="232" width="8" height="5" rx="1" fill="#383850" opacity=".7"/>
+                    <rect x="209" y="232" width="8" height="5" rx="1" fill="#383850" opacity=".7"/>
+                  </g>
+
+                  <!-- Body / torso -->
+                  <path d="M115 250 Q115 200 160 195 Q205 200 205 250 Z" fill="#ec4899" opacity=".9"/>
+                  <!-- Collar -->
+                  <path d="M148 198 Q160 210 172 198" fill="none" stroke="#d1436f" stroke-width="2"/>
+                  <!-- Arms -->
+                  <path d="M118 215 Q100 230 95 245" stroke="#f5cba7" stroke-width="13" stroke-linecap="round" fill="none"/>
+                  <path d="M202 215 Q220 230 225 245" stroke="#f5cba7" stroke-width="13" stroke-linecap="round" fill="none"/>
+                  <!-- Hands -->
+                  <ellipse cx="93"  cy="248" rx="10" ry="7" fill="#f5cba7"/>
+                  <ellipse cx="227" cy="248" rx="10" ry="7" fill="#f5cba7"/>
+
+                  <!-- Neck -->
+                  <rect x="152" y="170" width="16" height="30" rx="8" fill="#f5cba7"/>
+                  <!-- Head -->
+                  <ellipse cx="160" cy="148" rx="38" ry="38" fill="#f5cba7"/>
+                  <!-- Hair — brown, flowing -->
+                  <path d="M122 138 Q118 100 140 85 Q160 75 180 85 Q202 100 198 138 Q190 115 160 112 Q130 115 122 138Z" fill="#6b3a2a"/>
+                  <path d="M122 138 Q115 155 118 175 Q122 185 128 180 Q124 162 126 145Z" fill="#6b3a2a"/>
+                  <path d="M198 138 Q205 155 202 175 Q198 185 192 180 Q196 162 194 145Z" fill="#6b3a2a"/>
+                  <!-- Fringe -->
+                  <path d="M130 108 Q145 102 160 104 Q175 102 190 108 Q182 112 170 110 Q160 108 150 110 Q138 112 130 108Z" fill="#7a4030"/>
+                  <!-- Ears -->
+                  <ellipse cx="122" cy="150" rx="6" ry="8" fill="#f0b99c"/>
+                  <ellipse cx="198" cy="150" rx="6" ry="8" fill="#f0b99c"/>
+                  <!-- Eyes -->
+                  <g class="eyes">
+                    <ellipse cx="147" cy="148" rx="7" ry="7" fill="white"/>
+                    <ellipse cx="173" cy="148" rx="7" ry="7" fill="white"/>
+                    <ellipse cx="148" cy="149" rx="4" ry="4" fill="#3b2314"/>
+                    <ellipse cx="174" cy="149" rx="4" ry="4" fill="#3b2314"/>
+                    <ellipse cx="149" cy="148" rx="1.5" ry="1.5" fill="white"/>
+                    <ellipse cx="175" cy="148" rx="1.5" ry="1.5" fill="white"/>
+                    <!-- Lashes -->
+                    <path d="M141 142 Q143 139 145 141" stroke="#3b2314" stroke-width="1.2" fill="none"/>
+                    <path d="M167 141 Q169 138 172 141" stroke="#3b2314" stroke-width="1.2" fill="none"/>
+                  </g>
+                  <!-- Eyebrows -->
+                  <path d="M141 140 Q148 136 155 139" stroke="#6b3a2a" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <path d="M165 139 Q172 136 179 140" stroke="#6b3a2a" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <!-- Nose -->
+                  <path d="M158 156 Q160 161 162 156" stroke="#d4956b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                  <!-- Smile -->
+                  <path d="M151 165 Q160 172 169 165" stroke="#c0705a" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </g>
+
+                <defs>
+                  <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%"   stop-color="#ec4899" stop-opacity=".08"/>
+                    <stop offset="100%" stop-color="#7b5cf0" stop-opacity=".10"/>
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
           </aside>
 
@@ -85,7 +192,7 @@
 
             <p class="about-lead reveal reveal--d1">
               I'm a UX designer with a genuine obsession for the moment when
-              a product finally makes sense to someone — that instant of clarity
+              a product finally makes sense to someone, that instant of clarity
               when friction disappears and things just work.
             </p>
 
@@ -93,13 +200,11 @@
               My path into design started with a simple frustration: I kept
               encountering software that felt like it was designed for the
               engineers who built it, not the people who had to use it. So I
-              switched sides. Since then I've worked across fintech, health tech,
-              and digital products — always asking the same question: whose mental
-              model does this interface actually match?
+              switched sides.
             </p>
 
             <p class="reveal reveal--d3">
-              I'm also building skills in AI and emerging technology design —
+              I'm also building skills in AI and emerging technology design,
               because I believe the next wave of products will need designers
               who understand both human behaviour and how intelligent systems work.
               But the foundation is always the same: understand the person first.
@@ -119,7 +224,7 @@
                 <li class="skill">🤖 AI Product Design</li>
                 <li class="skill">🧪 Usability Testing</li>
                 <li class="skill">📊 Data Visualisation</li>
-                <li class="skill">🎙 Voice UX</li>
+                <li class="skill">🎙 Design Engineering</li>
                 <li class="skill">📱 Responsive Design</li>
                 <li class="skill">🔄 Design Systems</li>
                 <li class="skill">📝 UX Writing</li>
@@ -183,9 +288,6 @@
       </div>
     </section>
 
-    <!-- ===================================================================
-         EDUCATION & EXPERIENCE STRIP
-    ==================================================================== -->
     <section class="section" style="background:var(--c-surface); border-top:1px solid var(--c-border);" aria-labelledby="history-heading">
       <div class="wrap">
         <div class="sh reveal">
